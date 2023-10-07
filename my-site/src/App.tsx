@@ -1,24 +1,51 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { HashRouter, Link, Route, Routes } from "react-router-dom";
+import React, { Component } from "react";
+import { HashRouter, Route, Link, Routes } from "react-router-dom";
+import { Hobby } from "./pages/Hobby";
 
-const Home = () => <div>Home</div>;
-const About = () => <div>About</div>;
+const Home = () => {
+  return <div>Home</div>;
+};
 
-function App() {
+const About = () => {
+  return <div>About</div>;
+};
+
+const NoMatch = () => {
+  return <div>NoMatch</div>;
+};
+
+const HobbyDetail = () => {
   return (
-    <div className="App">
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <HashRouter>
+    <div>
+      <Link to="/">Back to home</Link>
+    </div>
+  );
+};
+
+export const App = () => {
+  return (
+    <HashRouter basename="/">
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/hobby">Hobby</Link>
+          </li>
+        </ul>
+        <hr />
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
+          <Route path="/hobby" Component={Hobby} />
+          <Route path="*" Component={NoMatch} />
+          <Route path="/detail" Component={HobbyDetail} />
         </Routes>
-      </HashRouter>
-    </div>
+      </div>
+    </HashRouter>
   );
-}
-
-export default App;
+};
