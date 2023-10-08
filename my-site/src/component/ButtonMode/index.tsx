@@ -1,20 +1,14 @@
 import { useState } from "react";
 import "./styles.css";
 
-export const ButtonMode = () => {
-  const [mode, setMode] = useState<string>("day");
+interface Props {
+  onClick: () => void;
+}
 
-  const toggleMode = () => {
-    if (mode === "day") {
-      setMode("night");
-    } else {
-      setMode("day");
-    }
-  };
-
+export const ButtonMode = ({ onClick }: Props) => {
   return (
-    <div className={`${mode}`}>
-      <button onClick={toggleMode}>{mode}</button>
+    <div className="mode-button">
+      <button onClick={onClick}></button>
     </div>
   );
 };
