@@ -1,25 +1,20 @@
-
-
-import { useState } from "react"
-
-
+import { useState } from "react";
+import "./styles.css";
 
 export const ButtonMode = () => {
+  const [mode, setMode] = useState<string>("day");
 
-    const [mode, setMode] = useState<string>("day")
-
-const toggleMode = () => {
+  const toggleMode = () => {
     if (mode === "day") {
-        setMode("night")
+      setMode("night");
     } else {
-        setMode("day")
+      setMode("day");
     }
-}
+  };
 
-
-    return (
-        <div>
-            <button onClick={toggleMode}>Day/Night</button>
-        </div>
-    )
-}
+  return (
+    <div className="day-night-button">
+      <button onClick={toggleMode}>Day/Night</button>
+    </div>
+  );
+};

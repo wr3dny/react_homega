@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import { HashRouter, Route, Link, Routes } from "react-router-dom";
 import { Hobby } from "./pages/Hobby";
+import { ButtonMode } from "./component/ButtonMode";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      {/* <ButtonMode /> */}
+      <div>Home</div>
+    </>
+  );
 };
 
 const About = () => {
@@ -25,7 +31,8 @@ const HobbyDetail = () => {
 export const App = () => {
   return (
     <HashRouter basename="/">
-      <div>
+      <ButtonMode />
+      {/* <div>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -37,15 +44,15 @@ export const App = () => {
             <Link to="/hobby">Hobby</Link>
           </li>
         </ul>
-        <hr />
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/hobby" Component={Hobby} />
-          <Route path="*" Component={NoMatch} />
-          <Route path="/detail" Component={HobbyDetail} />
-        </Routes>
-      </div>
+        <hr /> */}
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/about" Component={About} />
+        <Route path="/hobby" Component={Hobby} />
+        <Route path="*" Component={NoMatch} />
+        <Route path="/detail" Component={HobbyDetail} />
+      </Routes>
+      {/* </div> */}
     </HashRouter>
   );
 };
