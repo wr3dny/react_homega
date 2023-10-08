@@ -13,8 +13,8 @@ export const ButtonMode = () => {
   };
 
   return (
-    <div className="day-night-button">
-      <button onClick={toggleMode}>Day/Night</button>
+    <div className={`${mode}`}>
+      <button onClick={toggleMode}>{mode}</button>
     </div>
   );
 };
