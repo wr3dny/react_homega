@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./styles.css";
 
 interface Props {
@@ -7,8 +6,9 @@ interface Props {
 
 export const ButtonMode = ({ onClick }: Props) => {
   return (
-    <div className="mode-button">
-      <button onClick={onClick}></button>
+    <div className="mode-button" role="button" onClick={onClick}>
+      <div className="mode-button-light"></div>
+      <div className="mode-button-dark"></div>
     </div>
   );
 };
