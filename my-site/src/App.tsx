@@ -3,6 +3,7 @@ import { HashRouter, Route, Link, Routes } from "react-router-dom";
 import { Hobby } from "./pages/Hobby";
 import { ButtonMode } from "./component/ButtonMode";
 import "./App.css";
+import { Library } from "./pages/Library";
 
 const Home = () => {
   return (
@@ -58,6 +59,9 @@ export const App = () => {
                 <li>
                   <Link to="/hobby">Hobby</Link>
                 </li>
+                <li>
+                  <Link to="/library">Library</Link>
+                </li>
               </ul>
               <hr />
               <Routes>
@@ -66,6 +70,7 @@ export const App = () => {
                 <Route path="/hobby" Component={Hobby} />
                 <Route path="*" Component={NoMatch} />
                 <Route path="/detail" Component={HobbyDetail} />
+                <Route path="/library" Component={Library} />
               </Routes>
             </div>
           </div>

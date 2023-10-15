@@ -1,0 +1,11 @@
+.copy-button {
+  width: 100px;
+  height: 25px;
+  background-color: yellow;
+}
+
+.copy-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: green;
+}
