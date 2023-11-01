@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
+import data from "./booksData.json";
+// import * as fs from "fs";
 // import "./styles.css";
+
+console.log(data);
 
 export const Library = () => {
   const [message, setMessage] = useState<string>("");
@@ -8,7 +12,7 @@ export const Library = () => {
   // Function to read data from the JSON file
   const loadData = async () => {
     try {
-      const response = await fetch("Library/booksData.json");
+      const response = await fetch("booksData.json");
       if (response.ok) {
         const data = await response.json();
         setLibraryData(data);
@@ -17,6 +21,13 @@ export const Library = () => {
       console.error("Error reading data from the JSON file:", error);
     }
   };
+
+  // const fs = require("fs");
+
+  // fs.readFile("sample.json", "utf8", (err: any, data: any) => {
+  //   if (err) throw err;
+  //   const jsonObject = JSON.parse(data);
+  // });
 
   useEffect(() => {
     // Load data from the JSON file when the component mounts
@@ -28,7 +39,7 @@ export const Library = () => {
     try {
       const jsonData = JSON.stringify(libraryData, null, 2);
       // You can replace '/path/to/libraryData.json' with the actual file path
-      fetch("/path/to/booksData.json", {
+      fetch("booksData.json", {
         method: "POST",
         body: jsonData,
         headers: {
@@ -39,6 +50,9 @@ export const Library = () => {
       console.error("Error writing data to the JSON file:", error);
     }
   };
+
+  const [value, setValue] = useState("");
+  const onChange = (event: any) => setValue(event.target.value);
 
   const handleCopy = (message: string) => {
     navigator.clipboard.writeText(message);
@@ -77,6 +91,7 @@ export const Library = () => {
           ))}
         </tbody>
       </table>
+      <input type="text" value={value} onChange={onChange} />
 
       <button
         onClick={() => addBook({ title: "New Book", author: "New Author" })}
