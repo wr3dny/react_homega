@@ -1,0 +1,15 @@
+.filter-header {
+  background-color: green;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.my-svg {
+  height: 24px;
+  margin-right: 5px;
+}
+
+.title {
+  color: white;
+}
