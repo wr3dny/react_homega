@@ -4,6 +4,7 @@ import { Hobby } from "./pages/Hobby";
 import { ButtonMode } from "./component/ButtonMode";
 import "./App.css";
 import { Library } from "./pages/Library";
+import { Footer } from "./component/Footer";
 
 const Home = () => {
   return (
@@ -72,8 +73,10 @@ export const App = () => {
                 <Route path="/detail" Component={HobbyDetail} />
                 <Route path="/library" Component={Library} />
               </Routes>
+
             </div>
           </div>
+          <Footer />
         </HashRouter>
       </div>
     </>
