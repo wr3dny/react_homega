@@ -1,0 +1,9 @@
+.time-display-hours{
+    color: cyan;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.time-display-minutes{
+    color: lightgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
