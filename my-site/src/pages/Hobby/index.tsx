@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+
 import { CustomHeader } from "../../component/CustomHeader/CustomHeader";
-import { CurrentTime } from "../../component/CurrenTime";
+import { BackToHome } from "../../component/ButtonHome";
+import { Gallery } from "../../component/Gallery";
 
 // import "./styles.scss";
 
@@ -8,8 +9,8 @@ export const Hobby = () => {
   return (
     <div className="hobby-main">
       <CustomHeader label={"Hobby page"} />
-      <div>Gallery to be</div>
-      <Link to="/">Back to home</Link>
+      <Gallery />
+      <BackToHome />
     </div>
   );
 };
