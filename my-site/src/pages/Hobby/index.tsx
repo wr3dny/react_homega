@@ -10,7 +10,6 @@ export const Hobby = () => {
       <CustomHeader label={"Hobby page"} />
       <div>Gallery to be</div>
       <Link to="/">Back to home</Link>
-      <CurrentTime />
     </div>
   );
 };
