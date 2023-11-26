@@ -6,6 +6,7 @@ import "./App.css";
 import { Library } from "./pages/Library";
 import { Footer } from "./component/Footer";
 import { routes } from "./routes/routes";
+import { Navbar } from "./component/Navbar";
 
 
 export const App = () => {
@@ -28,23 +29,7 @@ export const App = () => {
           <div className={mode}>
             <h1>My Site</h1>
             <ButtonMode onClick={lightDarkMode} />
-            <div>
-              <div>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">About</Link>
-                  </li>
-                  <li>
-                    <Link to="/hobby">Hobby</Link>
-                  </li>
-                  <li>
-                    <Link to="/library">Library</Link>
-                  </li>
-                </ul>
-              </div>
+            <Navbar />
 
 
               <Routes>
@@ -53,7 +38,7 @@ export const App = () => {
                 ))}
               </Routes>
 
-            </div>
+
           </div>
           <Footer />
         </HashRouter>
