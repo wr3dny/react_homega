@@ -1,4 +1,10 @@
 .button {
   background-color: red;
   color: white;
+  width: 150px;
+}
+
+.button:hover {
+  background-color: blue;
+  cursor: pointer;
 }
