@@ -11,7 +11,7 @@ const SubPage2 = () => <div>SubPage2</div>;
 const App: React.FC = () => {
   return (
     <div>
-      <h1>Chose</h1>
+      <h1>Welcome</h1>
       <Link to="/chaos">Chaos</Link> | <Link to="/order">Order</Link>
       <Switch>
         <Route path="/chaos" exact component={Chaos} />
